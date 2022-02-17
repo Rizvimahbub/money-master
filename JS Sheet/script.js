@@ -105,6 +105,13 @@ function savingsAmount(){
         totalSavings.innerText = 'Invalid amount'
 
     }
+    else if(document.getElementById('saving-percentage').value < 0){
+
+        document.getElementById('saving-amount').style.color = 'red';
+
+        totalSavings.innerText = 'Invalid amount';
+
+    }
     else if(document.getElementById('total-income').value.trim() == ''){
 
         document.getElementById('saving-amount').style.color = 'red';
@@ -211,7 +218,7 @@ function negativeErrorHandling(){
         document.getElementById('rest-balance').innerText = '';
 
         document.getElementById('saving-amount').innerText = '';
-        
+
         document.getElementById('remaining-balance').innerText = '';
 
         document.getElementById('clothes-error-msg').innerText = '';
