@@ -1,0 +1,27 @@
+/* body tag */
+
+body{
+    
+    height: 150vh;
+}
+
+
+/*   Input tag   */
+
+input{
+    border: none;
+    padding: 10px;
+    background-color: #DCDCDC;
+    font-weight: 500;
+}
+
+
+
+/*   Button Tag    */
+
+button{
+    padding: 5px 15px;
+    font-weight: 500;
+    border: none;
+    background-color: #59A5FF;
+}
