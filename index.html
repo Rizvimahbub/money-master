@@ -64,7 +64,7 @@
 
                     <div class="w-75 d-flex flex-column align-items-end mb-2">
 
-                        <p class=" d-inline fw-bold">Income : <input class="rounded-3" id="total-income" type="text" placeholder="0"></p>
+                        <p class=" d-inline fw-bold">Income : <input class="rounded-3" id="total-income" type="number" value="0" placeholder="0"></p>
 
                         <p class="text-danger" id="income-error-msg"></p>
 
@@ -85,7 +85,7 @@
                     <p class="text-danger" id="rent-error-msg"></p>
 
 
-                    <p class="fw-bold ">Clothes : <input class="rounded-3" id="clothes-cost" type="text" value="0" placeholder="0"></p>
+                    <p class="fw-bold ">Clothes : <input class="rounded-3" id="clothes-cost" type="number" value="0" placeholder="0"></p>
 
                     <p class="text-danger" id="clothes-error-msg"></p>
 
@@ -93,12 +93,12 @@
 
                     <button id="expense-calculate-btn" class=" mb-3 text-white rounded-3">Calculate</button><br>
 
-                    <h5 class="d-inline fw-bold">Total Expenses :</h5><P class="d-inline fw-bold fs-5" id="total-expenses"></P><br><br>
+                    <h5 class="d-inline fw-bold">Total Expenses : </h5><P class="d-inline fw-bold fs-5" id="total-expenses"></P><br><br>
 
-                    <h5 class="d-inline fw-bold">Balance :</h5><P id="rest-balance" class="d-inline fw-bold fs-5"></P><br><br>
+                    <h5 class="d-inline fw-bold">Balance : </h5><P id="rest-balance" class="d-inline fw-bold fs-5"></P><br><br>
 
 
-                    <div class="">
+                    <div>
 
                         <p class="fw-bold text-center d-inline">Save: <input class="rounded-3" id="saving-percentage" type="text" placeholder="0"> % </p><br>  
                         <button id="percentage-calculate-btn" class=" my-3 ms-2 text-white rounded-3">Save</button>
