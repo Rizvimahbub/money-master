@@ -13,10 +13,44 @@ function totalExpensesCount(){
     let inputFoodCost = parseFloat(foodCost.value);
     let inputRentCost = parseFloat(rentCost.value);
     let inputClothesCost = parseFloat(clothesCost.value);
-
-    
     let totalExpensesAmount = inputFoodCost + inputRentCost + inputClothesCost;
-    totalExpenses.innerText = totalExpensesAmount;
+
+    if(document.getElementById('food-cost').value.trim() == ''){
+
+        totalExpensesAmount = inputRentCost + inputClothesCost;
+
+        totalExpenses.innerText = totalExpensesAmount;
+
+    }
+    else if(document.getElementById('rent-cost').value.trim() == ''){
+
+        totalExpensesAmount = inputFoodCost + inputClothesCost;
+
+        totalExpenses.innerText = totalExpensesAmount;
+
+    }
+    else if(document.getElementById('clothes-cost').value.trim() == ''){
+
+        totalExpensesAmount = inputFoodCost + inputRentCost ;
+
+        totalExpenses.innerText = totalExpensesAmount;
+
+    }
+    else if(document.getElementById('total-income').value.trim() == ''){
+
+        totalExpensesAmount = inputFoodCost + inputRentCost +  inputClothesCost;
+
+        totalExpenses.innerText = totalExpensesAmount;
+
+    }
+    else{
+
+        totalExpensesAmount = inputFoodCost + inputRentCost + inputClothesCost;
+
+        totalExpenses.innerText = totalExpensesAmount;
+
+    }
+    
     return totalExpensesAmount;
     
 }
@@ -29,17 +63,15 @@ function balance(){
 
     if(document.getElementById('total-income').value.trim() == ''){
 
-        document.getElementById('rest-balance').innerText = 'Invalid amount';
-        
+        restBalance.innerText = 'Sorry!! Income amount is not available.';
+
     }
     else{
 
         restBalance.innerText = balanceRemaining;
 
     }
-
     
-
     return balanceRemaining;
 
 }
@@ -59,6 +91,11 @@ function savingsAmount(){
         totalSavings.innerText = 'Invalid amount'
 
     }
+    else if(document.getElementById('total-income').value.trim() == ''){
+
+        totalSavings.innerText = 'Sorry!! Income amount is not available.';
+
+    }
     else{
 
         totalSavings.innerText = savingTotal;
@@ -75,6 +112,13 @@ function remainingBalance(){
     if(remainingBalanceAmount < 0){
 
         balanceRemaining.innerText = 'Invalid amount';
+
+    }
+    else if(document.getElementById('total-income').value.trim() == ''){
+
+        balanceRemaining.innerText  = 'Sorry!! Savings amount is not available.';
+
+        document.getElementById('')
 
     }
     else{
@@ -332,7 +376,7 @@ function emptyErrorHandling(){
     }
     else if(document.getElementById('clothes-cost').value.trim() == ''){
 
-        alert( "Please put an amount in the  amount box" );
+        alert( "Please put an amount in the clothes amount box" );
         
     }
     return;
@@ -341,8 +385,6 @@ function emptyErrorHandling(){
 
 
 document.getElementById('expense-calculate-btn').addEventListener('click',function(){
-
-    
 
     totalExpensesCount();
 
